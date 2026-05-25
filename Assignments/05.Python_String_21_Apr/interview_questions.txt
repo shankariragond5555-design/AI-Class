@@ -1,0 +1,169 @@
+01.What is a string in Python?
+Ans:-
+A string in Python is a sequence of characters enclosed in single quotes (' '), double quotes (" "), or triple quotes (''' ''' or """ """).
+Example:
+name = "Python"
+
+
+02.Why are strings called immutable objects?
+Ans:-
+Strings are called immutable because their contents cannot be changed after creation. Once a string is created, individual characters cannot be modified.
+
+
+03.What is the difference between indexing and slicing?
+Ans:-
+Indexing is used to access a single character from a string.
+Slicing is used to access a group of characters (substring).
+
+Example:
+
+s = "Python"
+
+print(s[1])    # Indexing
+print(s[1:4])  # Slicing
+
+
+04.What is the difference between positive indexing and negative indexing?
+Ans:-
+Positive indexing starts from left to right beginning with 0.
+Negative indexing starts from right to left beginning with -1.
+
+Example:
+
+s = "Python"
+
+print(s[0])   # P
+print(s[-1])  # n
+
+
+05.What happens if we try to modify a string directly?
+Ans:-
+Python gives an error because strings are immutable.
+
+Example:
+
+s = "Hello"
+s[0] = "Y"
+
+Output:
+
+TypeError: 'str' object does not support item assignment
+
+
+06.What is string concatenation?
+Ans:-
+String concatenation means joining two or more strings together using the + operator.
+
+Example:
+
+a = "Hello"
+b = "World"
+
+print(a + b)
+
+
+07.Which operators are commonly used with strings in Python?
+Ans:-
+Common operators used with strings are:
++ → Concatenation
+* → Repetition
+in → Membership
+not in → Non-membership
+
+
+08.What is the purpose of the repetition operator in strings?
+Ans:-
+The repetition operator (*) repeats a string multiple times.
+
+Example:
+
+print("Hi" * 3)
+
+Output:
+
+HiHiHi
+
+
+09.What is the use of membership operators in strings?
+Ans:-
+Membership operators check whether a character or substring exists in a string.
+
+Example:
+
+print("Py" in "Python")
+
+
+10.What is the difference between in and not in operators?
+Ans:-
+in returns True if the substring exists.
+not in returns True if the substring does not exist.
+
+Example:
+
+print("Py" in "Python")       # True
+print("Java" not in "Python") # True
+
+
+11.What does the len() function return for a string?
+Ans:-
+The len() function returns the total number of characters in a string.
+
+Example:
+
+print(len("Python"))
+
+Output:
+
+6
+
+
+12.How do min() and max() work on strings?
+Ans:-
+min() returns the character with the smallest ASCII/Unicode value.
+max() returns the character with the largest ASCII/Unicode value.
+
+Example:
+
+print(min("Python"))
+print(max("Python"))
+
+
+13.What is the use of the ord() function?
+Ans:-
+The ord() function returns the ASCII/Unicode value of a character.
+
+Example:
+
+print(ord('A'))
+
+Output:
+
+65
+
+
+14.What is the use of the chr() function?
+Ans:-
+The chr() function returns the character corresponding to an ASCII/Unicode value.
+
+Example:
+
+print(chr(65))
+
+Output:
+
+A
+
+
+15.How can you reverse a string in Python?
+Ans:-
+A string can be reversed using slicing with a step value of -1.
+
+Example:
+
+s = "Python"
+
+print(s[::-1])
+
+Output:
+
+nohtyP

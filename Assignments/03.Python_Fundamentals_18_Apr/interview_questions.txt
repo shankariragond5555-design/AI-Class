@@ -1,0 +1,172 @@
+01.Difference between / and // in Python:
+Ans:-
+/ → Division operator (returns float result)
+// → Floor division operator (returns quotient without decimal part)
+
+Example:
+
+10 / 3   # 3.3333
+10 // 3  # 3
+
+
+02.What is the Modulus operator (%) is used for:
+Ans:-
+Finding the remainder after division.
+
+Example:
+
+10 % 3   # 1
+
+
+03.What is the Exponentiation operator in Python:
+Ans:-
+** is used for power/exponent.
+
+Example:
+
+2 ** 3   # 8
+
+
+04.What will be the Output of 5 % 2:
+Ans:-
+1
+
+05.What will be the Output of 5 ** 2:
+Ans:-25
+
+
+06.What is operator precedence?
+Ans:-
+Operator precedence decides which operation is performed first in an expression.
+
+
+07.Which has higher priority: * or + ?
+Ans:-
+* has higher priority than +.
+
+
+08.What will be the Output of:
+Ans:-
+print(2 + 3 * 4)
+
+Output:
+
+14
+
+Because multiplication happens first:
+
+3 * 4 = 12
+2 + 12 = 14
+
+
+09.Output of:
+Ans:-
+print((2 + 3) * 4)
+
+Output:
+
+20
+
+Parentheses are solved first:
+
+2 + 3 = 5
+5 * 4 = 20
+
+
+10.Output of:
+Ans:-
+print(2 + 3 ** 2)
+
+Output:
+
+11
+
+Exponent happens first:
+
+3 ** 2 = 9
+2 + 9 = 11
+
+
+11.What is type conversion in Python?
+Ans:-
+Changing one data type into another data type.
+
+Example:
+
+int("5")
+
+
+12.How do we convert a float into an integer?
+Ans:-
+Using int().
+
+Example:
+
+int(3.9)
+13.What will be the Output of int(3.8):
+Ans:-
+3
+
+
+14.What will be the Output of float("3.14"):
+Ans:-
+3.14
+
+
+15.What will be the Output of bool(0):
+Ans:-
+False
+
+
+16.What will be the Output of bool(1):
+Ans:-
+True
+
+
+17.What will be the Output of bool(""):
+Ans:-
+False
+
+
+18.What will be the Output of bool("Hello"):
+Ans:-
+True
+
+
+19.Can we convert a string into a complex number?
+Ans:-
+Yes, if the string represents a valid number.
+
+Example:
+
+complex("3+4j")
+
+
+20.What is the Output of complex(True):
+Ans:-
+(1+0j)
+
+
+21.If you write 1a = 10, what error occurs and why?
+Ans:-
+A SyntaxError occurs because variable names cannot start with a number.
+
+
+22.Why is False = 10 invalid in Python?
+Ans:-
+False is a keyword/boolean constant and cannot be used as a variable name.
+
+
+23.If a = 10 and later a = 3.14, what happens to the veriable type?
+Ans:-
+The variable type changes automatically from int to float.
+
+
+24.Why does 10 / 5 return 2.0 instead of 2?
+Ans:-
+Because / always returns a floating-point result in Python.
+
+
+25.Why does int(3.9) return 3 and not 4?
+Ans:-
+Because int() removes the decimal part instead of rounding the number.

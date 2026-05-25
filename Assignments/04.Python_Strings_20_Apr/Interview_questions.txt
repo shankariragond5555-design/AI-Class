@@ -1,0 +1,229 @@
+01.What is a string in Python? What types of characters can a string contain?
+Ans:-
+A string in Python is a sequence of characters enclosed in quotes.
+A string can contain:
+Alphabets → "Python"
+Numbers → "123"
+Special symbols → "@#&*"
+Spaces → "Hello World"
+Mixed characters → "Python3@2025"
+
+
+02.What are the four ways to create a string in Python? Give an example of each.
+Ans:-
+# 1. Single quotes
+s1 = 'Hello'
+
+# 2. Double quotes
+s2 = "Hello"
+
+# 3. Triple single quotes
+s3 = '''Hello'''
+
+# 4. Triple double quotes
+s4 = """Hello"""
+
+
+03.What is the difference between """...""" and \ (backslash) for multiline strings? How does the output differ?
+Ans:-
+Using triple quotes:
+s = """Hello
+World"""
+print(s)
+
+Output:
+
+Hello
+World
+Using backslash:
+s = "Hello \
+World"
+print(s)
+
+Output:
+
+Hello World
+
+Difference:
+
+Triple quotes preserve line breaks.
+Backslash joins lines into a single line.
+
+
+04.What is string indexing? How does Python’s positive indexing start and in which direction does it go?
+Ans:-
+String indexing means accessing characters using index numbers.
+
+Positive indexing:
+
+Starts from 0
+Moves left to right
+
+Example:
+
+s = "Python"
+P	y	t	h	o	n
+0	1	2	3	4	5
+
+
+05.What is negative indexing? What does index -1 always refer to in any string?
+Ans:-
+Negative indexing accesses characters from the end of the string.
+
+Example:
+
+s = "Python"
+P	y	t	h	o	n
+-6	-5	-4	-3	-2	-1
+
+-1 always refers to the last character.
+
+
+06.For s = "welcome to india", what is the output of s[-1], s[-5], and s[-16]?
+Ans:-
+s = "welcome to india"
+s[-1] → 'a'
+s[-5] → 'i'
+s[-16] → 'w'
+
+
+07.What is string slicing? Write the general syntax with start, stop, and step.
+String slicing extracts part of a string.
+
+General syntax:
+
+string[start : stop : step]
+
+Where:
+
+start → starting index
+stop → ending index (excluded)
+step → increment/decrement value
+
+
+08.In slicing, the stop index is exclusive — what does that mean? Give an example.
+Ans:-
+Exclusive means the stop index character is not included in the output.
+
+Example:
+
+s = "Python"
+print(s[0:4])
+
+Output:
+
+Pyth
+
+Index 4 (o) is not included.
+
+
+09.What is the output of "welcome to india"[0:7:2]? Explain why.
+Ans:-
+print("welcome to india"[0:7:2])
+
+Output:
+
+wloe
+
+Explanation:
+
+Start = 0
+Stop = 7 (excluded)
+Step = 2
+
+Characters taken:
+
+index 0 → w
+index 2 → l
+index 4 → o
+index 6 → e
+
+
+10.What happens when you use s[:] or s[::] on a string? What does it return?
+Ans:-
+Both return the complete string.
+
+Example:
+
+s = "Python"
+
+print(s[:])
+print(s[::])
+
+Output:
+
+Python
+Python
+
+
+11.Can you change a single character of a string using indexing like s[0] = 'W'? Why or why not?
+Ans:-
+No, you cannot.
+
+Strings are immutable in Python, meaning their characters cannot be changed after creation.
+
+Example:
+
+s = "welcome"
+s[0] = 'W'
+
+This gives:
+
+TypeError
+
+
+12.What is the difference between s[11:16] and s[11:] for s = "welcome to india"?
+Ans:-
+s = "welcome to india"
+s[11:16] → 'india'
+s[11:] → 'india'
+
+Difference:
+
+s[11:16] stops at index 16.
+s[11:] goes till the end automatically.
+
+
+14.What does type("Hello") return? What class do all strings belong to in Python?
+Ans:-
+type("Hello")
+
+Output:
+
+<class 'str'>
+
+All strings belong to the str class.
+
+If s = "Python", what is s[1:-1]? Explain the result.
+s = "Python"
+print(s[1:-1])
+
+Output:
+
+ytho
+
+Explanation:
+
+Starts from index 1 → y
+Ends before index -1 (last character n)
+So result is "ytho"
+
+
+15.What is an escape character? Give two real examples from the notebook (like \' and \ ).
+Ans:-
+An escape character starts with a backslash \ and is used to represent special characters inside strings.
+
+Examples:
+
+\'   # Single quote
+\"   # Double quote
+\n   # New line
+\t   # Tab space
+
+Example:
+
+print('It\'s Python')
+
+Output:
+
+It's Python

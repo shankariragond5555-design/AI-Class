@@ -1,0 +1,206 @@
+1.What is an identifier in Python?
+Ans:-
+An identifier is the name used to identify variables, functions, classes, modules, etc., in Python.
+
+
+2.What are the rules for creating identifiers in Python?
+Ans:-
+Must start with a letter (A–Z or a–z) or underscore (_)
+Cannot start with a number
+Can contain letters, digits, and underscores
+Cannot contain spaces or special characters like @, #, $, etc.
+Cannot use Python keywords
+Identifiers are case sensitive
+
+
+3.Can we use keywords as variable names? Why?
+Ans:-
+No. Keywords have special meanings in Python, so they cannot be used as variable names.
+
+
+4.What is meant by Python being case sensitive?
+Ans:-
+Python treats uppercase and lowercase letters as different characters.
+
+
+5.What is the difference between A and a in Python?
+Ans:-
+A and a are treated as two different identifiers because Python is case sensitive.
+
+
+6.What are Python keywords?
+Ans:-
+Keywords are reserved words in Python that have predefined meanings and special purposes.
+
+
+7.Why can’t we use for, if, or class as variable names?
+Ans:-
+Because they are Python keywords reserved for specific programming functions.
+
+
+8.What is the difference between True and "True"?
+Ans:-
+True → Boolean value
+"True" → String value
+
+
+9.What is the role of None in Python?
+Ans:-
+None represents the absence of a value or a null value.
+
+
+10.Name any 10 Python keywords.
+Ans:-
+if, else, for, while, class, def, return, True, False, None
+
+
+11.What are the basic data types in Python?
+Ans:-
+int
+float
+complex
+bool
+str
+list
+tuple
+set
+dict
+
+
+12.What is the difference between int and float?
+Ans:-
+int stores whole numbers
+float stores decimal numbers
+
+
+13.What is a complex number in Python?
+Ans:-
+A complex number contains a real part and an imaginary part.
+Example: 3 + 4j
+
+
+14.Why does Python use j instead of i in complex numbers?
+Ans:-
+Python follows engineering notation, where j represents the imaginary unit.
+
+
+15.What are container data types in Python?
+Ans:-
+Container data types store multiple values together.
+Examples: list, tuple, set, dict
+
+
+16.What is the difference between list, tuple, set, and dict?
+Ans:-
+Type	      Ordered	       Mutable	            Duplicate            Values	Example
+
+List	        Yes	            Yes             	Allowed	               [1,2,3]
+
+Tuple	        Yes	             No	                Allowed	               (1,2,3)
+
+Set         	No	            Yes	                Not Allowed	           {1,2,3}
+
+Dict	        Yes	            Yes	             Keys not duplicated   	   {"a":1}
+
+
+17.What is a boolean type?
+Ans:-
+A boolean type represents logical values.
+
+
+18.What are the possible values of a boolean variable?
+Ans:-
+True and False
+
+
+19.What is a string in Python?
+Ans:-
+A string is a sequence of characters enclosed in quotes.
+
+
+20.Why are Python strings called immutable?
+Ans:-
+Because their contents cannot be changed after creation.
+
+
+21.What is dynamic typing in Python?
+Ans:-
+Python automatically determines the data type of a variable during execution.
+
+
+22.Can the same variable hold different types of values in Python?
+Ans:-
+Yes. A variable can store different data types at different times.
+
+
+23.What will happen in the below code?
+Ans:-
+a = 10
+a = "Hello"
+print(type(a))
+
+Output:
+
+<class 'str'>
+
+The variable a first stores an integer, then stores a string.
+
+
+24.What is multiple assignment in Python?
+Ans:-
+Assigning values to multiple variables in a single statement.
+
+
+25.How can we assign the same value to multiple variables?
+Ans:-
+a = b = c = 10
+
+
+26.What is the output of:
+Ans:-
+a = b = c = 5
+print(a, b, c)
+
+Output:
+
+5 5 5
+
+
+27.What is the difference between decimal, binary, octal, and hexadecimal numbers?
+Ans:-
+Number System	                 Base	                          Digits Used
+
+Decimal                        	  10	                              0–9
+
+Binary	                          2	                                  0–1
+
+Octal	                          8	                                  0–7
+
+Hexadecimal	                      16	                              0–9 and A–F
+
+
+28.How do we write a binary number in Python?
+Ans:-
+Using the prefix 0b
+Example:
+0b1010
+
+
+29.What is the prefix for octal numbers in Python?
+Ans:-
+0o
+
+
+30.What is the prefix for hexadecimal numbers in Python?
+Ans:-
+0x
+
+
+31.What is the decimal value of 0b1010?
+Ans:-
+10
+
+
+32.What is the decimal value of 0xA?
+Ans:-
+10

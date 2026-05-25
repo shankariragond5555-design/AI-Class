@@ -1,0 +1,135 @@
+Q1. What is Console I/O in Python? What is the difference between input and output?
+Ans:-
+Console I/O means taking data from the keyboard and displaying data on the screen.
+
+Input → Data entered by the user using input()
+Output → Data shown to the user using print()
+
+Example:
+
+name = input("Enter your name: ")
+print(name)
+
+Q2. What does the print() function do? Write its full syntax including sep and end parameters.
+Ans:-
+    print() function used to display the data 
+    syntax : 
+            (1) print("Shankar Iragond ",sep="-",end="\n")
+            (2) name="Shankar"
+                surname="Iragond"
+                print("Name : {},Surname :{}".format(name,surname))
+            (3) print(f"Name : {name}, Surname : {surname}")
+
+sep → Separator between values
+end → What to print at the end
+
+Q3. What is the default value of sep in print()? What will print("Hello", "World") output?
+Ans:-
+    default value of sep in print() is whitespace
+    print("Hello", "World") 
+    Output : Hello World
+
+
+    
+Q4. What does the end parameter in print() do? What is its default value?
+Ans:-
+    end parameter does decide our string or data end with which character
+    by default value is "\n" means next line goes to the new line for print instead of print on same line
+
+
+
+Q5. What is the difference between print(name, height, weight) and print(name, height, weight, sep="-")?
+Ans:-
+    print(name, height, weight) 
+    Output : name height weight
+
+    print(name, height, weight, sep="-")
+    Output : name-height-weight
+
+
+Q6. What does the input() function do? What data type does it always return?
+Ans:-
+    input() function accept data from used , and it returns in string data type always 
+
+
+Q7. A user enters 25 using input(). If you directly use it in a calculation, what problem will occur and how do you fix it?
+Ans:-
+    If user enters 25 as a input() , when we used it for calculation it will work as a string 
+
+    for ex; text1=intput("Enter the 1st number:") 
+            text2=intput("Enter the 2nd number:") 
+               if user gives text1= 25 and text2=25 as a input
+            print("Addition is :",text1+tex2)
+               it will return 2525 
+
+    means it takes values in string format , so for addition we want to convert it into integer using int()
+
+
+Q8. What is the difference between print(10) and print("10")? Will the output look the same?
+Ans:-
+    print(10) returns 10 in int data type
+    print("10") returns 10 in str data type
+    yes its same value but its data types are different
+
+
+Q9. What does the type() function do? Give examples of what it returns for int, float, str, and bool.
+Ans:-
+    type() function tells us the data type of the variables
+
+    ex ; print(type("10")) 
+         print(type(10))
+         print(type(True))
+         print(type(10+2j))
+
+    Output: <class 'str'>
+            <class 'int'>
+            <class 'bool'>
+            <class 'complex'>
+
+
+Q10. What does the id() function return? Will two variables with the same value always have the same id?
+Ans:-
+    id() returns the memory address of the variables
+    if two variables have the same value but they doesnt have same id because every variable stores in different memory locations
+
+
+Q11. What is the difference between input() with a prompt string and input() without one?
+Ans:-
+    input() with prompt
+    ex; name = input("Enter ur name: ")
+    input() without prompt doesnt pass any message
+    
+
+
+Q12. How would you take name, age, and height as input from a user and print them all in one line with a hyphen separator?
+Ans:-
+    example;
+    name=input("Enter name : ")
+    age=int(input("Enter age : "))
+    height=float(input("Enter height : "))
+
+    print("Name: ",name,"Age: ",age,"Height: ",height,sep="-")
+
+    Output : Name: -Shankar-Age: -25-Height: -170.9   
+
+
+Q13. What will be the output of the following and why?
+Ans:-
+val = input("Enter a number: ")
+print(type(val))
+
+    Output : <class 'str'>
+
+    because  by default input() function accept the data in string format we have to convert it into integer format using int()
+
+
+Q14. What is the difference between print(name) and print("name")? When does each one get used?
+Ans:-
+    print(name) it prints variable , used when we already created the variable as name and we want to access it 
+    print("name") it prints string = name , used when we want to pass some message or just simple string
+
+
+Q15. How is print() different from input()? Which one is used for output and which one is used for receiving data from the user?
+Ans:-
+    for input we used input() funtion for receiving data from user
+    and for output we used print() function to display Data

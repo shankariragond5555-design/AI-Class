@@ -1,0 +1,340 @@
+Q1. What does the replace() method do in Python? How many arguments does it take?
+Ans:-
+The replace() method replaces a specified word or character with another word or character in a string.
+
+Syntax:
+
+string.replace(old, new, count)
+old → text to be replaced
+new → replacement text
+count → optional; number of replacements
+
+It mainly takes 2 required arguments and 1 optional argument.
+
+Example:
+
+text = "I like tea"
+print(text.replace("tea", "coffee"))
+
+Output:
+
+I like coffee
+
+
+Q2. What is the difference between lstrip(), rstrip(), and strip()? Give one example of each.
+Ans:-
+These methods remove whitespace (or specified characters).
+
+Method	Removes From
+lstrip()	Left side
+rstrip()	Right side
+strip()	Both sides
+
+Examples:
+
+text = "   Python   "
+
+print(text.lstrip())
+print(text.rstrip())
+print(text.strip())
+
+Output:
+
+"Python   "
+"   Python"
+"Python"
+
+
+Q3. What does split() return? What is the default delimiter if none is provided?
+Ans:-
+split() breaks a string into parts and returns a list.
+
+If no delimiter is given, the default delimiter is whitespace (space).
+
+Example:
+
+text = "Python is easy"
+print(text.split())
+
+Output:
+
+['Python', 'is', 'easy']
+
+
+Q4. What is the difference between capitalize() and title()? Give one example where their output is different.
+Ans:-
+
+      Method	                                          Behavior
+    capitalize()	                         Makes only the first letter uppercase
+    title()	                                     Makes the first letter of every word uppercase
+
+Example:
+
+text = "python programming language"
+
+print(text.capitalize())
+print(text.title())
+
+Output:
+
+Python programming language
+Python Programming Language
+
+
+Q5. What does swapcase() do? What will "Hello World".swapcase() return?
+Ans:-
+swapcase() changes:
+
+uppercase → lowercase
+lowercase → uppercase
+
+Example:
+
+print("Hello World".swapcase())
+
+Output:
+
+hELLO wORLD
+
+
+Q6. What is the difference between chr() and ord()? Give one example of each.
+Ans:-
+   Function	                                      Purpose
+   chr()	                           Converts ASCII/Unicode number to character
+   ord()	                           Converts character to ASCII/Unicode number
+
+Examples:
+
+print(chr(65))
+print(ord('A'))
+
+Output:
+
+A
+65
+
+
+Q7. What does the str() built-in function do? Give one real-life example of when you would use it.
+Ans:-
+str() converts a value into a string.
+
+Example:
+
+age = 25
+print("My age is " + str(age))
+
+Without str(), string concatenation would cause an error.
+
+
+Q8. What does join() do? Which object calls join() -- the list or the separator string?
+Ans:-
+join() combines elements of a list into a single string.
+
+The separator string calls join(), not the list.
+
+Example:
+
+words = ["Python", "is", "fun"]
+
+print(" ".join(words))
+
+Output:
+
+Python is fun
+
+
+Q9. What is the difference between split() and partition()?
+Ans:-
+
+        Method	                          Return Type	                                Behavior
+        split()	                             List	                              Splits all occurrences
+        partition()	                         Tuple	                              Splits only first occurrence
+
+Example:
+
+text = "apple-banana-orange"
+
+print(text.split("-"))
+print(text.partition("-"))
+
+Output:
+
+['apple', 'banana', 'orange']
+('apple', '-', 'banana-orange')
+
+
+Q10. What does strip() remove from a string? Does it remove whitespace from the middle of a string?
+Ans:-
+strip() removes whitespace from the beginning and end of a string.
+
+It does NOT remove spaces from the middle.
+
+Example:
+
+text = "   Hello World   "
+
+print(text.strip())
+
+Output:
+
+Hello World
+
+
+Q11. What is the difference between lower() and upper()? Do they change the original string?
+Ans:-
+
+      Method	                   Action
+      lower()	             Converts to lowercase
+      upper()	             Converts to uppercase
+
+Strings are immutable, so these methods do not change the original string.
+
+Example:
+
+text = "Python"
+
+print(text.lower())
+print(text.upper())
+
+
+Q12. What is the difference between str(), int(), float(), and complex() in Python? Which category do they belong to -- methods or built-in functions?
+Ans:-
+These are built-in functions used for type conversion.
+
+     Function	                             Converts To
+      str()	                                  String
+      int()	                                  Integer
+      float()	                              Floating-point number
+      complex()	                              Complex number
+
+Example:
+
+print(str(10))
+print(int("5"))
+print(float("5.5"))
+print(complex(2,3))
+Q13. What will int("25") return? What will float("25") return? What is the difference in output?
+print(int("25"))
+print(float("25"))
+
+Output:
+
+25
+25.0
+
+Difference:
+
+int() returns an integer
+float() returns a decimal number
+
+
+Q14. Can you convert a float to int using int()? What happens to the decimal part -- does it round off or truncate?
+Ans:-
+Yes, you can convert a float to int.
+
+The decimal part is truncated (removed), not rounded.
+
+Example:
+
+print(int(7.9))
+
+Output:
+
+7
+
+
+Q15. What does complex() do? Give one example of a complex number and how str() converts it.
+Ans:-
+complex() creates a complex number.
+
+Example:
+
+num = complex(2, 3)
+
+print(num)
+print(str(num))
+
+Output:
+
+(2+3j)
+(2+3j)
+Q16. What will str(10), str(10.5), and str(10+4j) return? What type will each result be?
+print(str(10))
+print(str(10.5))
+print(str(10+4j))
+
+Output:
+
+'10'
+'10.5'
+'(10+4j)'
+
+All results are of type:
+
+str
+
+
+Q17. What does partition() return when the separator is NOT found in the string?
+Ans:-
+It returns a tuple containing:
+
+original string
+empty string
+empty string
+
+Example:
+
+text = "Python"
+
+print(text.partition("-"))
+
+Output:
+
+('Python', '', '')
+
+
+Q18. What is the difference between replace() and split()? Can both be used to remove a word from a string?
+Ans:-
+
+        Method	                            Purpose
+        replace()	                        Replaces text
+        split()	                            Breaks string into list
+
+Yes, both can help remove a word, but replace() is simpler.
+
+Example using replace():
+
+text = "I like apples"
+
+print(text.replace("apples", ""))
+
+
+Q19. What will "hello".upper().swapcase() return? Explain method chaining with this example.
+Ans:-
+print("hello".upper().swapcase())
+
+Output:
+
+hello
+
+Explanation:
+
+"hello".upper() → "HELLO"
+"HELLO".swapcase() → "hello"
+
+This is called method chaining, where one method is called after another.
+
+
+Q20. If chr(65) gives "A", what will chr(66), chr(67), and chr(90) give? What concept does this relate to?
+Ans:-
+print(chr(66))
+print(chr(67))
+print(chr(90))
+
+Output:
+
+B
+C
+Z
+
+This relates to the ASCII/Unicode character encoding system

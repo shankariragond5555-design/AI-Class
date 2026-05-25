@@ -1,0 +1,113 @@
+1. What is Python and why is it popular?
+Ans:-
+Python is a high-level, interpreted programming language known for its simple syntax and readability. It is used in web development, data science, artificial intelligence, automation, game development, and more.
+Easy to learn and use
+Simple and readable syntax
+Large collection of libraries and frameworks
+Works on multiple platforms
+Strong community support
+Used in modern technologies like AI and Machine Learning
+
+2. Who created Python and when was it first released?
+Ans:-
+Python was created by Guido van Rossum.
+Development started in the late 1980s
+First official release: 1991
+
+3. What are the main features of Python?
+Ans:-
+Main features of Python include:
+Simple and easy syntax
+Interpreted language
+Object-oriented programming support
+Dynamically typed
+Cross-platform compatibility
+Large standard library
+Open-source and free
+Supports multiple programming styles
+Automatic memory management
+
+4. What is the difference between Python 2 and Python 3?
+Ans:-
+Python 2	                                                 Python 3
+Older version	                                         Newer and improved version
+print used without parentheses	                         print() uses parentheses
+Unicode support limited	                                 Better Unicode support
+Division of integers gives integer output	             Division gives float output
+No longer supported officially	                         Fully supported and recommended
+
+Example:
+
+Python 2:
+
+print "Hello"
+
+Python 3:
+
+print("Hello")
+
+5. What is dynamic typing in Python?
+Ans:-
+In Python, you do not need to declare the data type of a variable explicitly. The type is decided automatically during execution.
+
+Example:
+
+x = 10       # integer
+x = "Hello"  # string
+
+This feature is called dynamic typing.
+
+6. What is the difference between static typing and dynamic typing?
+Ans:-
+    Static Typing	                                   Dynamic Typing
+Variable type declared before use	              Type decided automatically
+Type checking happens before execution	          Type checking happens during execution
+Less flexible	                                  More flexible
+Example: C, Java	                              Example: Python
+
+Example of static typing:
+
+int x = 10;
+
+Example of dynamic typing:
+
+x = 10
+
+7. Why is Python called a cross-platform language?
+Ans:-
+Python programs can run on different operating systems such as:
+
+Windows
+Linux
+macOS
+
+The same Python code usually works on all platforms with little or no changes. Therefore, Python is called a cross-platform language.
+
+8. What is CPython?
+Ans:-
+CPython is the default and most widely used implementation of Python.
+
+Written in the C programming language
+Converts Python code into bytecode
+Executes the bytecode using the Python Virtual Machine (PVM)
+
+9. What is the role of the Python Virtual Machine (PVM)?
+Ans:-
+The Python Virtual Machine (PVM) is responsible for executing Python bytecode.
+
+Working process:
+Python source code (.py) is converted into bytecode
+Bytecode is sent to the PVM
+PVM executes the bytecode line by line
+
+The PVM acts like an interpreter between Python code and the computer system.
+
+10. What is the difference between machine code and bytecode?
+Ans:-
+  Machine Code	                                  Bytecode
+Directly understood by CPU	                 Intermediate code understood by PVM
+Platform dependent	                         Platform independent
+Faster execution	                         Slightly slower
+Generated after final compilation	         Generated before execution
+Example Flow:
+Python Code → Bytecode → PVM → Machine Code
