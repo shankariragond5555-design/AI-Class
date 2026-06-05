@@ -1,0 +1,532 @@
+## Q1. What is a function in Python?
+
+A function is a reusable block of code that performs a specific task.
+
+---
+
+## Q2. What are the two types of functions in Python? Give two examples of each.
+
+### 1. Built-in Functions
+
+Examples:
+
+* `print()`
+* `input()`
+
+### 2. User-defined Functions
+
+Examples:
+
+```python
+def add():
+    pass
+
+def greet():
+    pass
+```
+
+---
+
+## Q3. What is the syntax of a user-defined function? What keyword is used to define it?
+
+Keyword: `def`
+
+Syntax:
+
+```python
+def function_name():
+    # function body
+    pass
+```
+
+---
+
+## Q4. What are the advantages of using functions? Name all 5.
+
+1. Code Reusability
+2. Modularity
+3. Easy Maintenance
+4. Better Readability
+5. Reduced Code Duplication
+
+---
+
+## Q5. What is the difference between defining a function and calling a function?
+
+| Defining a Function              | Calling a Function                  |
+| -------------------------------- | ----------------------------------- |
+| Creates the function             | Executes the function               |
+| Uses `def` keyword               | Uses function name with parentheses |
+| Runs only once during definition | Can run many times                  |
+
+Example:
+
+```python
+def greet():      # Definition
+    print("Hello")
+
+greet()           # Call
+```
+
+---
+
+## Q6. What is a function body? What is the role of indentation inside a function?
+
+* The statements inside a function are called the **function body**.
+* Indentation tells Python which statements belong to the function.
+
+Example:
+
+```python
+def greet():
+    print("Hello")
+    print("Welcome")
+```
+
+---
+
+## Q7. What is the function naming convention in Python? Give one good example and one bad example.
+
+Use lowercase letters and underscores.
+
+Good:
+
+```python
+def calculate_sum():
+    pass
+```
+
+Bad:
+
+```python
+def CalculateSum():
+    pass
+```
+
+---
+
+## Q8. Can you call a function multiple times? What is the advantage of doing that?
+
+Yes.
+
+Advantage:
+
+* Reuses code without rewriting it.
+
+Example:
+
+```python
+def greet():
+    print("Hello")
+
+greet()
+greet()
+greet()
+```
+
+---
+
+## Q9. What is code reusability? How do functions help achieve it?
+
+Code reusability means using the same code multiple times.
+
+Functions help by allowing us to write code once and call it whenever needed.
+
+---
+
+## Q10. What is modularity in programming? How do functions help in making code modular?
+
+Modularity means dividing a large program into smaller manageable parts.
+
+Functions make code modular by separating tasks into independent blocks.
+
+---
+
+## Q11. What will happen if you call a function before defining it in Python?
+
+Python raises a `NameError`.
+
+Example:
+
+```python
+greet()
+
+def greet():
+    print("Hello")
+```
+
+Output:
+
+```python
+NameError: name 'greet' is not defined
+```
+
+---
+
+## Q12. What is the difference between a parameter and an argument? Give an example of each.
+
+* **Parameter:** Variable in function definition.
+* **Argument:** Value passed during function call.
+
+Example:
+
+```python
+def greet(name):      # name = parameter
+    print(name)
+
+greet("Rahul")        # Rahul = argument
+```
+
+---
+
+## Q13. What does the return statement do? What does a function return if there is no return statement?
+
+* `return` sends a value back to the caller.
+* Without a return statement, Python returns `None`.
+
+Example:
+
+```python
+def add():
+    return 10
+```
+
+---
+
+## Q14. What is the difference between a function that uses print() inside it vs a function that uses return? Which is better for reusable code and why?
+
+### Using print()
+
+```python
+def add():
+    print(10)
+```
+
+### Using return
+
+```python
+def add():
+    return 10
+```
+
+`return` is better because the returned value can be stored, reused, and processed further.
+
+---
+
+## Q15. Can a Python function return multiple values? How are they returned and how do you unpack them?
+
+Yes.
+
+Example:
+
+```python
+def details():
+    return "Rahul", 25
+
+name, age = details()
+
+print(name)
+print(age)
+```
+
+---
+
+## Q16. What are positional arguments? What rule must you follow when passing them?
+
+Arguments passed according to position.
+
+Example:
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+```
+
+Rule:
+
+* Arguments must be passed in the correct order.
+
+---
+
+## Q17. What are keyword arguments? What advantage do they have over positional arguments?
+
+Example:
+
+```python
+def greet(name, age):
+    print(name, age)
+
+greet(age=25, name="Rahul")
+```
+
+Advantage:
+
+* Order does not matter.
+* Improves readability.
+
+---
+
+## Q18. Can you mix positional and keyword arguments in the same function call? What rule applies?
+
+Yes.
+
+Example:
+
+```python
+def greet(name, age):
+    print(name, age)
+
+greet("Rahul", age=25)
+```
+
+Rule:
+
+* Positional arguments must come before keyword arguments.
+
+---
+
+## Q19. What are default arguments? Where must default parameters be placed in the function signature?
+
+Parameters with predefined values.
+
+Example:
+
+```python
+def greet(name="Rahul"):
+    print(name)
+```
+
+Rule:
+
+* Default parameters must be placed after non-default parameters.
+
+---
+
+## Q20. What error occurs if you place a default parameter BEFORE a non-default parameter?
+
+Example:
+
+```python
+def greet(name="Rahul", age):
+    pass
+```
+
+Error:
+
+```python
+SyntaxError: non-default argument follows default argument
+```
+
+---
+
+## Q21. What is *args? What type does Python store the arguments in inside the function?
+
+`*args` collects multiple positional arguments.
+
+Stored as a **tuple**.
+
+Example:
+
+```python
+def show(*args):
+    print(args)
+
+show(10, 20, 30)
+```
+
+Output:
+
+```python
+(10, 20, 30)
+```
+
+---
+
+## Q22. What is **kwargs? What type does Python store the keyword arguments in inside the function?
+
+`**kwargs` collects multiple keyword arguments.
+
+Stored as a **dictionary**.
+
+Example:
+
+```python
+def show(**kwargs):
+    print(kwargs)
+
+show(name="Rahul", age=25)
+```
+
+Output:
+
+```python
+{'name': 'Rahul', 'age': 25}
+```
+
+---
+
+## Q23. What is the difference between *args and **kwargs? When would you use each?
+
+| *args                         | **kwargs                   |
+| ----------------------------- | -------------------------- |
+| Collects positional arguments | Collects keyword arguments |
+| Stored as tuple               | Stored as dictionary       |
+
+Use:
+
+* `*args` when number of positional arguments is unknown.
+* `**kwargs` when number of keyword arguments is unknown.
+
+---
+
+## Q24. Can you use *args and **kwargs together in the same function? What is the correct order of all parameter types?
+
+Yes.
+
+Order:
+
+```python
+regular → default → *args → **kwargs
+```
+
+Example:
+
+```python
+def demo(a, b=10, *args, **kwargs):
+    pass
+```
+
+---
+
+## Q25. When using *args, can you still access individual arguments by index? Demonstrate with an example.
+
+Yes.
+
+Example:
+
+```python
+def show(*args):
+    print(args[0])
+    print(args[1])
+
+show(10, 20, 30)
+```
+
+Output:
+
+```python
+10
+20
+```
+
+---
+
+## Q26. When using **kwargs, how do you access individual values by key?
+
+Example:
+
+```python
+def show(**kwargs):
+    print(kwargs["name"])
+
+show(name="Rahul", age=25)
+```
+
+Output:
+
+```python
+Rahul
+```
+
+---
+
+## Q27. What is a nested function? What is another name for it?
+
+A function defined inside another function is called a **nested function** or **inner function**.
+
+Example:
+
+```python
+def outer():
+    def inner():
+        print("Hello")
+```
+
+---
+
+## Q28. Can an inner function be called from outside its enclosing function? What error occurs if you try?
+
+No.
+
+Example:
+
+```python
+def outer():
+    def inner():
+        print("Hello")
+
+inner()
+```
+
+Output:
+
+```python
+NameError: name 'inner' is not defined
+```
+
+---
+
+## Q29. What does the following code return?
+
+```python
+def greet(name="rahul", age=25):
+    print("my name is", name)
+
+result = greet("ganesh")
+print(result)
+```
+
+Output:
+
+```python
+my name is ganesh
+None
+```
+
+Explanation:
+
+* `greet()` prints `"my name is ganesh"`.
+* No `return` statement is present, so Python returns `None`.
+
+---
+
+## Q30. What is the correct order of parameter types in a function definition? Give an example showing all four types together.
+
+Correct Order:
+
+```python
+regular → default → *args → **kwargs
+```
+
+Example:
+
+```python
+def demo(name, age=25, *args, **kwargs):
+    print(name)
+    print(age)
+    print(args)
+    print(kwargs)
+
+demo("Rahul", 30, 100, 200, city="Pune", country="India")
+```
+
+Output:
+
+```python
+Rahul
+30
+(100, 200)
+{'city': 'Pune', 'country': 'India'}
+```

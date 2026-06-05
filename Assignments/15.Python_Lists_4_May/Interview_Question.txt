@@ -1,0 +1,472 @@
+## Q1. What is mutability in Python? Why is a list called a mutable data type?
+
+**Mutability** means an object can be changed after it is created.
+
+A **list** is called mutable because we can:
+
+* Add elements
+* Remove elements
+* Modify existing elements
+
+```python
+nums = [10, 20, 30]
+nums[1] = 50
+print(nums)
+```
+
+**Output:**
+
+```python
+[10, 50, 30]
+```
+
+---
+
+## Q2. How is a list different from an integer in terms of mutability?
+
+| List                           | Integer                           |
+| ------------------------------ | --------------------------------- |
+| Mutable                        | Immutable                         |
+| Can be modified after creation | Cannot be modified after creation |
+
+```python
+a = [1, 2, 3]
+a[0] = 10
+
+x = 5
+x = 10   # Creates a new integer object
+```
+
+---
+
+## Q3. What is list concatenation? Which operator is used?
+
+Combining two or more lists into a single list is called **list concatenation**.
+
+Operator used: **`+`**
+
+```python
+a = [1, 2]
+b = [3, 4]
+
+c = a + b
+print(c)
+```
+
+**Output:**
+
+```python
+[1, 2, 3, 4]
+```
+
+---
+
+## Q4. Does list concatenation modify the original lists?
+
+**No.** It creates a new list.
+
+```python
+a = [1, 2]
+b = [3, 4]
+
+c = a + b
+
+print(a)
+print(b)
+```
+
+**Output:**
+
+```python
+[1, 2]
+[3, 4]
+```
+
+---
+
+## Q5. How do you convert a string into a list in Python? What function is used?
+
+Use the **`list()`** function.
+
+```python
+s = "Python"
+
+result = list(s)
+print(result)
+```
+
+**Output:**
+
+```python
+['P', 'y', 't', 'h', 'o', 'n']
+```
+
+---
+
+## Q6. Can we convert a tuple and a set into a list? How is it done?
+
+Yes, using **`list()`**.
+
+### Tuple to List
+
+```python
+t = (10, 20, 30)
+
+l = list(t)
+print(l)
+```
+
+**Output:**
+
+```python
+[10, 20, 30]
+```
+
+### Set to List
+
+```python
+s = {1, 2, 3}
+
+l = list(s)
+print(l)
+```
+
+**Output:**
+
+```python
+[1, 2, 3]
+```
+
+---
+
+## Q7. What is aliasing in Python lists?
+
+When two variables refer to the **same list object**, it is called **aliasing**.
+
+```python
+a = [10, 20, 30]
+b = a
+```
+
+Here `a` and `b` point to the same list.
+
+---
+
+## Q8. What problem does aliasing cause?
+
+A change made through one variable affects the other variable.
+
+```python
+a = [10, 20, 30]
+b = a
+
+b[0] = 100
+
+print(a)
+```
+
+**Output:**
+
+```python
+[100, 20, 30]
+```
+
+---
+
+## Q9. How can you check whether two variables are aliases of each other?
+
+Use the **`is`** operator or compare **`id()`** values.
+
+```python
+a = [1, 2, 3]
+b = a
+
+print(a is b)
+```
+
+**Output:**
+
+```python
+True
+```
+
+or
+
+```python
+print(id(a))
+print(id(b))
+```
+
+Both IDs will be the same.
+
+---
+
+## Q10. What is cloning in Python lists?
+
+Creating a separate copy of a list is called **cloning**.
+
+```python
+a = [10, 20, 30]
+b = a.copy()
+```
+
+Now `a` and `b` are different lists.
+
+---
+
+## Q11. What is the difference between aliasing and cloning?
+
+| Aliasing              | Cloning                  |
+| --------------------- | ------------------------ |
+| Same object           | Different objects        |
+| Changes affect both   | Changes affect only one  |
+| Uses assignment (`=`) | Uses `copy()` or slicing |
+
+```python
+a = [1, 2, 3]
+b = a          # aliasing
+c = a.copy()   # cloning
+```
+
+---
+
+## Q12. What is the `in` operator in Python lists? What does it return?
+
+The **`in`** operator checks whether an element exists in a list.
+
+It returns:
+
+* `True`
+* `False`
+
+```python
+nums = [10, 20, 30]
+
+print(20 in nums)
+print(50 in nums)
+```
+
+**Output:**
+
+```python
+True
+False
+```
+
+---
+
+## Q13. Is the `in` operator case-sensitive when checking string elements in a list?
+
+**Yes**, it is case-sensitive.
+
+```python
+names = ["Rahul", "Amit"]
+
+print("Rahul" in names)
+print("rahul" in names)
+```
+
+**Output:**
+
+```python
+True
+False
+```
+
+---
+
+## Q14. How do you check if a list is empty in Python? What is the Pythonic way to do it?
+
+### Pythonic Way
+
+```python
+my_list = []
+
+if not my_list:
+    print("List is empty")
+```
+
+### Using len()
+
+```python
+if len(my_list) == 0:
+    print("List is empty")
+```
+
+The first method is preferred.
+
+---
+
+## Q15. What does `len()` do in a list?
+
+`len()` returns the number of elements in a list.
+
+```python
+nums = [10, 20, 30, 40]
+
+print(len(nums))
+```
+
+**Output:**
+
+```python
+4
+```
+
+---
+
+## Q16. What is the difference between `max()` and `min()`?
+
+| Function | Purpose                |
+| -------- | ---------------------- |
+| `max()`  | Returns largest value  |
+| `min()`  | Returns smallest value |
+
+```python
+nums = [5, 2, 9, 1]
+
+print(max(nums))
+print(min(nums))
+```
+
+**Output:**
+
+```python
+9
+1
+```
+
+---
+
+## Q17. What does `sum()` do? Can it be used on a list containing strings?
+
+`sum()` adds all numeric elements in a list.
+
+```python
+nums = [10, 20, 30]
+
+print(sum(nums))
+```
+
+**Output:**
+
+```python
+60
+```
+
+### With Strings
+
+```python
+words = ["A", "B", "C"]
+
+print(sum(words))
+```
+
+**Output:**
+
+```python
+TypeError
+```
+
+So **`sum()` cannot be used with string lists.**
+
+---
+
+## Q18. What is the difference between `any()` and `all()`?
+
+### `any()`
+
+Returns `True` if at least one element is True.
+
+```python
+print(any([0, 0, 5]))
+```
+
+**Output:**
+
+```python
+True
+```
+
+### `all()`
+
+Returns `True` only if all elements are True.
+
+```python
+print(all([1, 2, 3]))
+```
+
+**Output:**
+
+```python
+True
+```
+
+```python
+print(all([1, 0, 3]))
+```
+
+**Output:**
+
+```python
+False
+```
+
+---
+
+## Q19. What does `sorted()` do? Does it change the original list?
+
+`sorted()` returns a new sorted list.
+
+It **does not modify** the original list.
+
+```python
+nums = [4, 2, 8, 1]
+
+result = sorted(nums)
+
+print(result)
+print(nums)
+```
+
+**Output:**
+
+```python
+[1, 2, 4, 8]
+[4, 2, 8, 1]
+```
+
+---
+
+## Q20. What does `reversed()` return? Why do we need `list()` around it to print the output?
+
+`reversed()` returns a **reverse iterator object**, not a list.
+
+```python
+nums = [1, 2, 3, 4]
+
+r = reversed(nums)
+print(r)
+```
+
+**Output:**
+
+```python
+<list_reverseiterator object at ...>
+```
+
+To see the actual reversed elements, convert it to a list.
+
+```python
+nums = [1, 2, 3, 4]
+
+print(list(reversed(nums)))
+```
+
+**Output:**
+
+```python
+[4, 3, 2, 1]
+```
+
+So, `list()` converts the iterator returned by `reversed()` into a printable list.

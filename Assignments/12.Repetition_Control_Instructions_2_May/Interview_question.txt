@@ -1,0 +1,332 @@
+## Q1. What is a loop in Python? Why do we use loops?
+
+A **loop** is a control structure that repeatedly executes a block of code as long as a condition is satisfied or for a fixed number of times.
+
+**Why use loops?**
+
+* To avoid writing the same code repeatedly.
+* To process collections of data efficiently.
+* To automate repetitive tasks.
+
+Example:
+
+```python
+for i in range(5):
+    print(i)
+```
+
+---
+
+## Q2. What is the difference between a while loop and a for loop?
+
+| While Loop                                          | For Loop                                     |
+| --------------------------------------------------- | -------------------------------------------- |
+| Executes as long as a condition is True.            | Executes for each item in a sequence.        |
+| Used when the number of iterations is unknown.      | Used when the number of iterations is known. |
+| Requires manual updating of the condition variable. | Automatically moves to the next item.        |
+
+---
+
+## Q3. What is the syntax of a while loop? What happens if the condition never becomes False?
+
+### Syntax:
+
+```python
+while condition:
+    # code block
+```
+
+Example:
+
+```python
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+```
+
+If the condition never becomes `False`, the loop runs forever, creating an **infinite loop**.
+
+---
+
+## Q4. What is an infinite loop? How can you avoid it in a while loop?
+
+An **infinite loop** is a loop that never ends because its condition always remains `True`.
+
+Example:
+
+```python
+while True:
+    print("Hello")
+```
+
+### To avoid it:
+
+* Update the loop variable correctly.
+* Ensure the condition eventually becomes `False`.
+* Use `break` when necessary.
+
+---
+
+## Q5. What is the syntax of a for loop in Python?
+
+### Syntax:
+
+```python
+for variable in sequence:
+    # code block
+```
+
+Example:
+
+```python
+for i in range(5):
+    print(i)
+```
+
+---
+
+## Q6. Can a for loop iterate over a string? What does it print for each iteration?
+
+Yes. A `for` loop can iterate through a string.
+
+Example:
+
+```python
+name = "Python"
+
+for ch in name:
+    print(ch)
+```
+
+Output:
+
+```
+P
+y
+t
+h
+o
+n
+```
+
+Each iteration prints one character of the string.
+
+---
+
+## Q7. What is the range() function? Write its full syntax with start, stop, and step.
+
+`range()` generates a sequence of numbers.
+
+### Syntax:
+
+```python
+range(start, stop, step)
+```
+
+* **start** → starting value (default = 0)
+* **stop** → ending value (not included)
+* **step** → increment/decrement value (default = 1)
+
+---
+
+## Q8. What does range(5) generate? What does range(1, 6) generate?
+
+### `range(5)`
+
+Generates:
+
+```python
+0, 1, 2, 3, 4
+```
+
+### `range(1, 6)`
+
+Generates:
+
+```python
+1, 2, 3, 4, 5
+```
+
+---
+
+## Q9. What is the difference between range(10) and range(0, 10)?
+
+There is **no difference**.
+
+```python
+range(10)
+```
+
+and
+
+```python
+range(0, 10)
+```
+
+both generate:
+
+```python
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+```
+
+---
+
+## Q10. What does the step parameter in range() do? What will range(0, 10, 2) generate?
+
+The **step** parameter determines how much the value changes after each iteration.
+
+Example:
+
+```python
+range(0, 10, 2)
+```
+
+Generates:
+
+```python
+0, 2, 4, 6, 8
+```
+
+---
+
+## Q11. What does the break statement do in a loop? When is it used?
+
+The `break` statement immediately terminates the loop.
+
+Example:
+
+```python
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+```
+
+Output:
+
+```
+0
+1
+2
+3
+4
+```
+
+It is used when a condition is met and no further iterations are needed.
+
+---
+
+## Q12. What does the continue statement do in a loop? How is it different from break?
+
+The `continue` statement skips the current iteration and moves to the next iteration.
+
+Example:
+
+```python
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+```
+
+Output:
+
+```
+0
+1
+3
+4
+```
+
+### Difference:
+
+* `break` → stops the loop completely.
+* `continue` → skips only the current iteration.
+
+---
+
+## Q13. What will happen to the rest of the loop iterations when break is encountered?
+
+When `break` is encountered:
+
+* The current loop stops immediately.
+* All remaining iterations are skipped.
+* Control moves to the statement after the loop.
+
+Example:
+
+```python
+for i in range(10):
+    if i == 3:
+        break
+    print(i)
+```
+
+Output:
+
+```
+0
+1
+2
+```
+
+---
+
+## Q14. What will happen when continue is encountered—does it stop the loop or skip only that iteration?
+
+`continue` does **not** stop the loop.
+
+It only skips the current iteration and continues with the next one.
+
+Example:
+
+```python
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+```
+
+Output:
+
+```
+0
+1
+3
+4
+```
+
+---
+
+## Q15. What is the difference between while loop and for loop—when would you prefer one over the other?
+
+### Use a `for` loop when:
+
+* The number of iterations is known.
+* Iterating over a sequence (list, tuple, string, range, etc.).
+
+Example:
+
+```python
+for i in range(5):
+    print(i)
+```
+
+### Use a `while` loop when:
+
+* The number of iterations is unknown.
+* The loop depends on a condition.
+
+Example:
+
+```python
+password = ""
+while password != "admin":
+    password = input("Enter password: ")
+```
+
+### Summary:
+
+* **For loop** → known number of repetitions.
+* **While loop** → condition-based repetitions.

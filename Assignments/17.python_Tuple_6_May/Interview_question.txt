@@ -1,0 +1,358 @@
+### I1. What is a tuple in Python?
+
+A tuple is an **ordered and immutable collection of elements** in Python.
+
+---
+
+### I2. Which brackets are used to create a tuple?
+
+Tuples are created using **parentheses `( )`**.
+
+**Example:**
+
+```python
+tup = (10, 20, 30)
+```
+
+---
+
+### I3. Difference between homogeneous and heterogeneous tuples
+
+| Type                | Description                               | Example                      |
+| ------------------- | ----------------------------------------- | ---------------------------- |
+| Homogeneous Tuple   | Contains elements of the same data type   | `(10, 20, 30, 40)`           |
+| Heterogeneous Tuple | Contains elements of different data types | `(10, "Python", 3.14, True)` |
+
+---
+
+### I4. What does "ordered" mean for a tuple?
+
+Ordered means that the elements maintain their position and can be accessed using indexes.
+
+**Example:**
+
+```python
+tup = (10, 20, 30)
+```
+
+Here, `10` is always at index `0`.
+
+---
+
+### I5. How do you access individual elements of a tuple?
+
+Elements are accessed using **indexing**.
+
+**Example:**
+
+```python
+tup = (10, 20, 30)
+print(tup[1])   # 20
+```
+
+The starting index is **0**.
+
+---
+
+### I6. What does "immutable" mean for a tuple?
+
+Immutable means that the elements of a tuple **cannot be changed after creation**.
+
+---
+
+### I7. Three operations you cannot perform on a tuple
+
+Because tuples are immutable, you cannot:
+
+1. Modify an element
+2. Add an element
+3. Delete an element
+
+**Examples:**
+
+```python
+tup[0] = 100      # Error
+tup.append(50)    # Error
+del tup[1]        # Error
+```
+
+---
+
+### I8. Why would you use a tuple instead of a list?
+
+* Tuples are faster than lists.
+* They protect data from accidental modification.
+* They can be used as dictionary keys (if elements are immutable).
+
+---
+
+### I9. Does a tuple allow duplicate values?
+
+Yes, tuples allow duplicate values.
+
+**Example:**
+
+```python
+tup = (10, 20, 10, 30, 20)
+```
+
+---
+
+### I10. How do you create an empty tuple?
+
+```python
+tup = ()
+print(type(tup))
+```
+
+**Output:**
+
+```python
+<class 'tuple'>
+```
+
+---
+
+### I11. How do you create a tuple with only one element?
+
+```python
+tup = (25,)
+```
+
+The trailing comma is mandatory.
+
+If you forget the comma:
+
+```python
+tup = (25)
+```
+
+Python treats it as an integer, not a tuple.
+
+---
+
+### I12. Output of `type((25))` and `type((25,))`
+
+```python
+print(type((25)))
+```
+
+**Output:**
+
+```python
+<class 'int'>
+```
+
+```python
+print(type((25,)))
+```
+
+**Output:**
+
+```python
+<class 'tuple'>
+```
+
+**Difference:** The comma creates the tuple.
+
+---
+
+### I13. Difference between positive and negative indexing
+
+```python
+tup1 = (10, 20, 30, 40, 50)
+```
+
+| Positive Index   | Negative Index    |
+| ---------------- | ----------------- |
+| Starts from left | Starts from right |
+| 0,1,2,...        | -1,-2,-3,...      |
+
+**Examples:**
+
+```python
+tup1[2]    # 30
+tup1[-2]   # 40
+```
+
+---
+
+### I14. What do `tup1[-1]` and `tup1[0]` return?
+
+```python
+tup1 = (10, 20, 30, 40, 50)
+```
+
+```python
+tup1[-1]
+```
+
+**Output:** `50`
+
+```python
+tup1[0]
+```
+
+**Output:** `10`
+
+---
+
+### I15. What is slicing in a tuple?
+
+Slicing extracts a portion of a tuple.
+
+**Syntax:**
+
+```python
+tuple_name[start : stop : step]
+```
+
+---
+
+### I16. Difference between `tup1[2:]` and `tup1[:2]`
+
+```python
+tup1 = (10, 20, 30, 40, 50)
+```
+
+```python
+tup1[2:]
+```
+
+**Output:**
+
+```python
+(30, 40, 50)
+```
+
+```python
+tup1[:2]
+```
+
+**Output:**
+
+```python
+(10, 20)
+```
+
+---
+
+### I17. How do you reverse a tuple using slicing?
+
+```python
+tup1[::-1]
+```
+
+**Example:**
+
+```python
+tup1 = (10, 20, 30, 40, 50)
+print(tup1[::-1])
+```
+
+**Output:**
+
+```python
+(50, 40, 30, 20, 10)
+```
+
+---
+
+### I18. Name three ways to loop through a tuple
+
+#### 1. Using a for loop
+
+```python
+for x in tup:
+    print(x)
+```
+
+#### 2. Using a while loop
+
+```python
+i = 0
+while i < len(tup):
+    print(tup[i])
+    i += 1
+```
+
+#### 3. Using enumerate()
+
+```python
+for index, value in enumerate(tup):
+    print(index, value)
+```
+
+---
+
+### I19. When would you use `enumerate()` instead of a regular for loop?
+
+Use `enumerate()` when you need both the **index and value** of each element.
+
+**Example:**
+
+```python
+for i, value in enumerate(tup):
+    print(i, value)
+```
+
+---
+
+### I20. Difference between a for loop and a while loop
+
+| For Loop                         | While Loop                                       |
+| -------------------------------- | ------------------------------------------------ |
+| Automatically traverses elements | Requires manual index management                 |
+| Simpler for tuples               | More code needed                                 |
+| Less chance of errors            | Can cause infinite loops if not handled properly |
+
+---
+
+### I21. What is the output of `type((10))` and why?
+
+```python
+print(type((10)))
+```
+
+**Output:**
+
+```python
+<class 'int'>
+```
+
+**Reason:** Parentheses alone do not create a tuple. A single-element tuple requires a comma.
+
+---
+
+### I22. Can a tuple contain another tuple inside it?
+
+Yes.
+
+**Example:**
+
+```python
+tup = (10, 20, (30, 40), 50)
+```
+
+Here `(30, 40)` is a nested tuple.
+
+---
+
+### I23. Difference between a list and a tuple
+
+| List                                    | Tuple                         |
+| --------------------------------------- | ----------------------------- |
+| Uses `[ ]`                              | Uses `( )`                    |
+| Mutable                                 | Immutable                     |
+| Supports add, modify, delete operations | Does not support modification |
+| Slightly slower                         | Slightly faster               |
+| Example: `[10,20,30]`                   | Example: `(10,20,30)`         |
+
+**Example:**
+
+```python
+my_list = [10, 20, 30]
+my_tuple = (10, 20, 30)
+```
+
+**Key Point:** Use a **list** when data may change and a **tuple** when data should remain fixed.

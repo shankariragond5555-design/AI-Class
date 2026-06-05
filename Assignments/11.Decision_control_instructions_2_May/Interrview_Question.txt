@@ -1,0 +1,308 @@
+### Q1. What is decision control in Python? Why do we need it?
+
+Decision control allows a program to make decisions and execute different blocks of code based on conditions. We need it to control the flow of a program according to different situations.
+
+**Example:**
+
+```python
+age = 18
+if age >= 18:
+    print("Eligible to vote")
+```
+
+---
+
+### Q2. What is the syntax of a simple if statement? What happens if the condition is False?
+
+**Syntax:**
+
+```python
+if condition:
+    statements
+```
+
+If the condition is **False**, the code inside the `if` block is skipped.
+
+**Example:**
+
+```python
+x = 3
+if x > 5:
+    print("Hello")
+```
+
+**Output:** No output (condition is False).
+
+---
+
+### Q3. What is the difference between if and if-else statement?
+
+| if                                         | if-else                                                |
+| ------------------------------------------ | ------------------------------------------------------ |
+| Executes code only when condition is True. | Executes one block if True and another block if False. |
+| No alternative action.                     | Provides an alternative action.                        |
+
+**Example:**
+
+```python
+if age >= 18:
+    print("Adult")
+```
+
+```python
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+```
+
+---
+
+### Q4. What is the difference between if-else and if-elif-else?
+
+| if-else                    | if-elif-else                |
+| -------------------------- | --------------------------- |
+| Checks only one condition. | Checks multiple conditions. |
+| Has two possible paths.    | Has many possible paths.    |
+
+**Example:**
+
+```python
+if marks >= 40:
+    print("Pass")
+else:
+    print("Fail")
+```
+
+```python
+if marks >= 90:
+    print("A Grade")
+elif marks >= 75:
+    print("B Grade")
+else:
+    print("C Grade")
+```
+
+---
+
+### Q5. How many elif blocks can you write in a single if-elif-else statement?
+
+You can write **any number of `elif` blocks** as needed. There is no fixed limit.
+
+**Example:**
+
+```python
+if x == 1:
+    print("One")
+elif x == 2:
+    print("Two")
+elif x == 3:
+    print("Three")
+else:
+    print("Other")
+```
+
+---
+
+### Q6. What is indentation in Python? What happens if you do not indent the code inside an if block?
+
+**Indentation** means leaving spaces (usually 4 spaces) at the beginning of a line to show that it belongs to a block.
+
+If you do not indent correctly, Python raises an **IndentationError**.
+
+**Example:**
+
+```python
+if True:
+    print("Hello")
+```
+
+Incorrect:
+
+```python
+if True:
+print("Hello")
+```
+
+---
+
+### Q7. What is the difference between the and operator and the or operator?
+
+| and                                           | or                                              |
+| --------------------------------------------- | ----------------------------------------------- |
+| Returns True only if all conditions are True. | Returns True if at least one condition is True. |
+
+---
+
+### Q8. When does and return True? Give one example.
+
+`and` returns **True only when all conditions are True**.
+
+**Example:**
+
+```python
+age = 20
+if age > 18 and age < 60:
+    print("Eligible")
+```
+
+**Output:**
+
+```
+Eligible
+```
+
+---
+
+### Q9. When does or return True? Give one example.
+
+`or` returns **True if at least one condition is True**.
+
+**Example:**
+
+```python
+x = 10
+if x < 5 or x > 8:
+    print("Condition True")
+```
+
+**Output:**
+
+```
+Condition True
+```
+
+---
+
+### Q10. What will be the output of the following and why?
+
+```python
+x = 10
+if x > 5:
+    print("Greater")
+print("Done")
+```
+
+**Output:**
+
+```
+Greater
+Done
+```
+
+**Why?**
+
+* `x > 5` is True, so `"Greater"` is printed.
+* `"Done"` is outside the `if` block, so it is always printed.
+
+---
+
+### Q11. What is the difference between = and == in Python? Which one is used in if conditions?
+
+| =                              | ==                   |
+| ------------------------------ | -------------------- |
+| Assignment operator.           | Comparison operator. |
+| Assigns a value to a variable. | Compares two values. |
+
+**Example:**
+
+```python
+x = 10      # Assignment
+if x == 10: # Comparison
+    print("Equal")
+```
+
+`==` is used in `if` conditions.
+
+---
+
+### Q12. Can you write an if statement without an else block? Is else mandatory?
+
+Yes, you can write an `if` statement without an `else` block.
+
+`else` is **not mandatory**.
+
+**Example:**
+
+```python
+x = 8
+if x > 5:
+    print("Greater")
+```
+
+---
+
+### Q13. What happens if none of the elif conditions are True and there is no else block?
+
+No block is executed, and the program continues with the next statement after the `if-elif` structure.
+
+**Example:**
+
+```python
+x = 5
+
+if x > 10:
+    print("A")
+elif x > 20:
+    print("B")
+
+print("Done")
+```
+
+**Output:**
+
+```
+Done
+```
+
+---
+
+### Q14. Can you use and and or together in the same condition? Give one example.
+
+Yes, you can use both together.
+
+**Example:**
+
+```python
+age = 25
+citizen = True
+
+if (age >= 18 and age <= 60) or citizen:
+    print("Eligible")
+```
+
+**Output:**
+
+```
+Eligible
+```
+
+---
+
+### Q15. What will be the output and why?
+
+```python
+num = 15
+if (num > 10) and (num < 20):
+    print("Number is between 10 and 20")
+else:
+    print("Number is out of range")
+```
+
+**Output:**
+
+```
+Number is between 10 and 20
+```
+
+**Why?**
+
+* `num > 10` → True
+* `num < 20` → True
+* `True and True` → True
+
+Therefore, the `if` block executes and prints:
+
+```
+Number is between 10 and 20
+```

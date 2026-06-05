@@ -1,0 +1,360 @@
+## Q1. What is the syntax for calling a list method in Python?
+
+**Syntax:**
+
+```python
+list_name.method_name(arguments)
+```
+
+**Example:**
+
+```python
+numbers = [1, 2, 3]
+numbers.append(4)
+```
+
+---
+
+## Q2. What does `append()` do? Where does it add the element? Can it add only one element at a time?
+
+`append()` adds an element to the **end** of the list.
+
+**Syntax:**
+
+```python
+list_name.append(item)
+```
+
+**Example:**
+
+```python
+nums = [1, 2, 3]
+nums.append(4)
+print(nums)
+# Output: [1, 2, 3, 4]
+```
+
+Yes, it adds **only one element at a time**.
+
+---
+
+## Q3. What is the difference between `append()` and `insert()`?
+
+| append()                | insert()                             |
+| ----------------------- | ------------------------------------ |
+| Adds element at the end | Adds element at a specified position |
+| Takes one argument      | Takes two arguments                  |
+| Faster                  | Slightly slower                      |
+
+---
+
+## Q4. What does `insert()` do? What two arguments does it take? What happens to the existing elements when `insert()` is used?
+
+`insert()` adds an element at a specified index.
+
+**Syntax:**
+
+```python
+list_name.insert(index, value)
+```
+
+**Example:**
+
+```python
+nums = [10, 20, 30]
+nums.insert(1, 15)
+print(nums)
+# Output: [10, 15, 20, 30]
+```
+
+Existing elements shift one position to the right.
+
+---
+
+## Q5. What does `extend()` do? How is it different from `append()`?
+
+`extend()` adds multiple elements from another iterable.
+
+**Example:**
+
+```python
+a = [1, 2]
+a.extend([3, 4])
+print(a)
+# Output: [1, 2, 3, 4]
+```
+
+Difference:
+
+```python
+a.append([3, 4])
+# [1, 2, [3, 4]]
+
+a.extend([3, 4])
+# [1, 2, 3, 4]
+```
+
+---
+
+## Q6. What is the difference between `extend()` and the `+` operator for joining two lists?
+
+**extend():**
+
+```python
+a = [1, 2]
+a.extend([3, 4])
+# Modifies original list
+```
+
+**+ operator:**
+
+```python
+a = [1, 2]
+b = [3, 4]
+c = a + b
+# Creates a new list
+```
+
+---
+
+## Q7. What does `remove()` do? Does it remove by value or by index? What happens if the value appears more than once?
+
+`remove()` removes an element by **value**.
+
+```python
+nums = [10, 20, 30]
+nums.remove(20)
+```
+
+If the value appears multiple times, only the **first occurrence** is removed.
+
+```python
+nums = [5, 5, 5]
+nums.remove(5)
+print(nums)
+# Output: [5, 5]
+```
+
+---
+
+## Q8. What does `pop()` do when called without any argument?
+
+It removes and returns the **last element**.
+
+```python
+nums = [10, 20, 30]
+x = nums.pop()
+print(x)
+# Output: 30
+```
+
+---
+
+## Q9. What does `pop(index)` do? How is it different from `pop()`?
+
+It removes and returns the element at the specified index.
+
+```python
+nums = [10, 20, 30]
+nums.pop(1)
+print(nums)
+# Output: [10, 30]
+```
+
+* `pop()` → removes last element.
+* `pop(index)` → removes element at given index.
+
+---
+
+## Q10. What is the difference between `remove()` and `pop()`?
+
+| remove()                     | pop()                |
+| ---------------------------- | -------------------- |
+| Removes by value             | Removes by index     |
+| Does not return removed item | Returns removed item |
+| Value must exist             | Index must be valid  |
+
+---
+
+## Q11. What does `clear()` do? After calling `clear()`, does the list variable still exist?
+
+`clear()` removes all elements from the list.
+
+```python
+nums = [1, 2, 3]
+nums.clear()
+print(nums)
+# Output: []
+```
+
+Yes, the list variable still exists; it becomes an empty list.
+
+---
+
+## Q12. What does `index()` do? What does it return? If a value appears more than once, which occurrence does `index()` return?
+
+`index()` finds the position of a value.
+
+```python
+nums = [10, 20, 30]
+print(nums.index(20))
+# Output: 1
+```
+
+It returns the **first occurrence** if the value appears multiple times.
+
+```python
+nums = [5, 10, 5]
+print(nums.index(5))
+# Output: 0
+```
+
+---
+
+## Q13. What does `count()` do? What does it return?
+
+`count()` counts how many times a value appears.
+
+```python
+nums = [1, 2, 1, 1]
+print(nums.count(1))
+# Output: 3
+```
+
+Returns an integer count.
+
+---
+
+## Q14. What does `sort()` do? Does it modify the original list or return a new one?
+
+`sort()` arranges elements in ascending order.
+
+```python
+nums = [3, 1, 2]
+nums.sort()
+print(nums)
+# Output: [1, 2, 3]
+```
+
+It **modifies the original list** and returns `None`.
+
+---
+
+## Q15. What is the difference between `sort()` and `sorted()`?
+
+| sort()                 | sorted()                  |
+| ---------------------- | ------------------------- |
+| Modifies original list | Creates a new sorted list |
+| Works only on lists    | Works on any iterable     |
+| Returns None           | Returns sorted list       |
+
+**Example:**
+
+```python
+a = [3, 1, 2]
+
+b = sorted(a)
+
+print(a)  # [3, 1, 2]
+print(b)  # [1, 2, 3]
+```
+
+---
+
+## Q16. What does `reverse()` do? Does it modify the original list or return a new one?
+
+`reverse()` reverses the order of elements.
+
+```python
+nums = [1, 2, 3]
+nums.reverse()
+print(nums)
+# Output: [3, 2, 1]
+```
+
+It modifies the original list and returns `None`.
+
+---
+
+## Q17. What is the difference between `reverse()` and `reversed()`?
+
+| reverse()              | reversed()                 |
+| ---------------------- | -------------------------- |
+| Modifies original list | Returns an iterator        |
+| Works on lists only    | Works on many iterables    |
+| No new object          | Original remains unchanged |
+
+**Example:**
+
+```python
+nums = [1, 2, 3]
+
+r = list(reversed(nums))
+
+print(r)
+# Output: [3, 2, 1]
+```
+
+---
+
+## Q18. What does `copy()` do? What kind of copy does it create? How can you verify that the copy is at a different memory location?
+
+`copy()` creates a **shallow copy** of the list.
+
+```python
+a = [1, 2, 3]
+b = a.copy()
+```
+
+Check memory locations using `id()`:
+
+```python
+print(id(a))
+print(id(b))
+```
+
+Different IDs mean different memory locations.
+
+```python
+print(a is b)
+# Output: False
+```
+
+---
+
+## Q19. How does Python compare two lists? What does it compare — the length or the elements?
+
+Python compares lists **element by element** from left to right.
+
+```python
+print([1, 2, 3] == [1, 2, 3])
+# True
+```
+
+It does not compare only lengths.
+
+---
+
+## Q20. How does Python decide which list is greater when comparing two lists element by element?
+
+Python compares corresponding elements from left to right.
+
+```python
+print([1, 5] > [1, 3])
+# True
+```
+
+Explanation:
+
+* First elements: 1 == 1
+* Second elements: 5 > 3
+* Therefore `[1, 5]` is greater.
+
+Another example:
+
+```python
+print([2, 1] > [1, 100])
+# True
+```
+
+Since the first element `2 > 1`, Python decides immediately without checking the remaining elements.

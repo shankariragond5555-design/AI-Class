@@ -1,0 +1,301 @@
+### Q1. What are the three main ways to print formatted output in Python?
+
+The three main ways are:
+
+1. **Normal print() with commas**
+
+   ```python
+   name = "Raj"
+   age = 22
+   print("Name:", name, "Age:", age)
+   ```
+
+2. **format() method**
+
+   ```python
+   print("Name: {} Age: {}".format(name, age))
+   ```
+
+3. **f-string (formatted string literal)**
+
+   ```python
+   print(f"Name: {name} Age: {age}")
+   ```
+
+---
+
+### Q2. What is string concatenation? What operator is used for it?
+
+**String concatenation** means joining two or more strings together.
+
+The **+ (plus)** operator is used.
+
+Example:
+
+```python
+first = "Hello"
+second = "World"
+print(first + " " + second)
+```
+
+Output:
+
+```python
+Hello World
+```
+
+---
+
+### Q3. Why do you need to convert an integer to str() before using string concatenation? What error occurs if you don't?
+
+Concatenation works only with strings. Integers must be converted using `str()`.
+
+Example:
+
+```python
+age = 25
+print("Age: " + str(age))
+```
+
+Without conversion:
+
+```python
+print("Age: " + age)
+```
+
+Error:
+
+```python
+TypeError: can only concatenate str (not "int") to str
+```
+
+---
+
+### Q4. What is the difference between the normal print method and string concatenation?
+
+| Normal print()                             | String Concatenation          |
+| ------------------------------------------ | ----------------------------- |
+| Uses commas                                | Uses + operator               |
+| Automatically handles different data types | Requires conversion to string |
+| Easier for simple output                   | Useful for building strings   |
+
+Example:
+
+```python
+print("Age:", 25)
+print("Age: " + str(25))
+```
+
+Both produce:
+
+```python
+Age: 25
+```
+
+---
+
+### Q5. What does {} represent inside the format() method?
+
+`{}` is called a **placeholder**.
+
+Values passed inside `format()` are inserted into these placeholders.
+
+Example:
+
+```python
+name = "Raj"
+print("Hello {}".format(name))
+```
+
+Output:
+
+```python
+Hello Raj
+```
+
+---
+
+### Q6. Does the order of variables inside format() matter? What happens if you change the order?
+
+Yes, the order matters.
+
+Example:
+
+```python
+name = "Raj"
+age = 22
+
+print("{} {}".format(name, age))
+```
+
+Output:
+
+```python
+Raj 22
+```
+
+Changing order:
+
+```python
+print("{} {}".format(age, name))
+```
+
+Output:
+
+```python
+22 Raj
+```
+
+The values are inserted according to their position.
+
+---
+
+### Q7. What is an f-string? What letter do you write before the string and why?
+
+An **f-string** is a formatted string introduced in Python 3.6.
+
+Write the letter **f** before the string.
+
+Example:
+
+```python
+name = "Raj"
+print(f"Hello {name}")
+```
+
+Output:
+
+```python
+Hello Raj
+```
+
+The `f` tells Python to replace values inside `{}` with variables or expressions.
+
+---
+
+### Q8. What is the difference between format() and f-string? Which one is easier to read?
+
+| format()                           | f-string                 |
+| ---------------------------------- | ------------------------ |
+| Uses `.format()` method            | Uses `f` before string   |
+| Slightly longer syntax             | Shorter syntax           |
+| Available in older Python versions | Introduced in Python 3.6 |
+| Less readable for complex strings  | More readable            |
+
+Example:
+
+```python
+print("Name: {} Age: {}".format(name, age))
+```
+
+```python
+print(f"Name: {name} Age: {age}")
+```
+
+**f-strings are generally easier to read and write.**
+
+---
+
+### Q9. Can you perform calculations directly inside an f-string like {price * qty}? Does it work?
+
+Yes. Expressions and calculations work directly inside f-strings.
+
+Example:
+
+```python
+price = 100
+qty = 3
+
+print(f"Total = {price * qty}")
+```
+
+Output:
+
+```python
+Total = 300
+```
+
+---
+
+### Q10. What will happen if you write `print("Age: " + 25)`? How do you fix it?
+
+Code:
+
+```python
+print("Age: " + 25)
+```
+
+Result:
+
+```python
+TypeError
+```
+
+Fix:
+
+```python
+print("Age: " + str(25))
+```
+
+or
+
+```python
+print("Age:", 25)
+```
+
+or
+
+```python
+print(f"Age: {25}")
+```
+
+---
+
+### Q11. Which printing method is the most modern and recommended in Python 3 — normal, format(), or f-string?
+
+**f-strings** are the most modern and recommended method in Python 3 because they are:
+
+* Easy to read
+* Easy to write
+* Fast
+* Support expressions and calculations
+
+Example:
+
+```python
+name = "Raj"
+age = 22
+
+print(f"Name: {name}, Age: {age}")
+```
+
+---
+
+### Q12. Write the same sentence using all three methods for `name = "Raj"` and `age = 22`.
+
+**1. Normal print()**
+
+```python
+name = "Raj"
+age = 22
+
+print("My name is", name, "and I am", age, "years old.")
+```
+
+**2. format() method**
+
+```python
+print("My name is {} and I am {} years old.".format(name, age))
+```
+
+**3. f-string**
+
+```python
+print(f"My name is {name} and I am {age} years old.")
+```
+
+Output for all three:
+
+```python
+My name is Raj and I am 22 years old.
+```

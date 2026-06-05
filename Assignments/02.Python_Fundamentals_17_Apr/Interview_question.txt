@@ -1,0 +1,396 @@
+### 1. What is an identifier in Python?
+
+An **identifier** is the name used to identify variables, functions, classes, modules, etc. in Python.
+
+**Example:**
+
+```python
+name = "Rahul"
+age = 20
+```
+
+Here, `name` and `age` are identifiers.
+
+---
+
+### 2. What are the rules for creating identifiers in Python?
+
+1. Must start with a letter (A-Z, a-z) or underscore (_).
+2. Cannot start with a digit.
+3. Can contain letters, digits, and underscores.
+4. Cannot contain spaces or special characters (`@`, `#`, `$`, etc.).
+5. Cannot be a Python keyword.
+6. Python identifiers are case sensitive.
+
+**Valid:**
+
+```python
+name
+_age
+student1
+```
+
+**Invalid:**
+
+```python
+1name
+my-name
+for
+```
+
+---
+
+### 3. Can we use keywords as variable names? Why?
+
+No. Keywords have predefined meanings in Python and are reserved for specific purposes.
+
+**Example:**
+
+```python
+if = 10    # Error
+```
+
+---
+
+### 4. What is meant by Python being case sensitive?
+
+Python treats uppercase and lowercase letters as different.
+
+**Example:**
+
+```python
+name = "Rahul"
+Name = "Amit"
+```
+
+Both are different variables.
+
+---
+
+### 5. What is the difference between A and a in Python?
+
+`A` and `a` are considered different identifiers because Python is case sensitive.
+
+```python
+A = 10
+a = 20
+print(A)  # 10
+print(a)  # 20
+```
+
+---
+
+### 6. What are Python keywords?
+
+Keywords are reserved words that have special meanings and cannot be used as identifiers.
+
+**Examples:** `if`, `for`, `while`, `class`, `True`, `False`.
+
+---
+
+### 7. Why can’t we use for, if, or class as variable names?
+
+Because they are Python keywords reserved for language syntax.
+
+```python
+for = 10    # SyntaxError
+```
+
+---
+
+### 8. What is the difference between True and "True"?
+
+* `True` → Boolean value.
+* `"True"` → String value.
+
+```python
+print(type(True))      # <class 'bool'>
+print(type("True"))    # <class 'str'>
+```
+
+---
+
+### 9. What is the role of None in Python?
+
+`None` represents the absence of a value or a null value.
+
+```python
+x = None
+print(x)
+```
+
+**Output:**
+
+```python
+None
+```
+
+---
+
+### 10. Name any 10 Python keywords.
+
+1. if
+2. else
+3. for
+4. while
+5. class
+6. def
+7. return
+8. import
+9. True
+10. False
+
+---
+
+### 11. What are the basic data types in Python?
+
+* int
+* float
+* complex
+* bool
+* str
+
+---
+
+### 12. What is the difference between int and float?
+
+| int           | float           |
+| ------------- | --------------- |
+| Whole numbers | Decimal numbers |
+| Example: 10   | Example: 10.5   |
+
+```python
+a = 10
+b = 10.5
+```
+
+---
+
+### 13. What is a complex number in Python?
+
+A number containing a real and an imaginary part.
+
+```python
+x = 2 + 3j
+```
+
+Here:
+
+* Real part = 2
+* Imaginary part = 3j
+
+---
+
+### 14. Why does Python use j instead of i in complex numbers?
+
+Python follows electrical engineering notation where **j** represents the imaginary unit to avoid confusion with variables commonly named **i**.
+
+```python
+x = 5 + 2j
+```
+
+---
+
+### 15. What are container data types in Python?
+
+Container data types store multiple values together.
+
+Examples:
+
+* List
+* Tuple
+* Set
+* Dictionary
+
+---
+
+### 16. What is the difference between list, tuple, set, and dict?
+
+| Type       | Syntax        | Ordered | Mutable | Duplicates         |
+| ---------- | ------------- | ------- | ------- | ------------------ |
+| List       | `[ ]`         | Yes     | Yes     | Yes                |
+| Tuple      | `( )`         | Yes     | No      | Yes                |
+| Set        | `{ }`         | No      | Yes     | No                 |
+| Dictionary | `{key:value}` | Yes     | Yes     | Keys cannot repeat |
+
+---
+
+### 17. What is a boolean type?
+
+A data type that represents logical values.
+
+```python
+x = True
+y = False
+```
+
+---
+
+### 18. What are the possible values of a boolean variable?
+
+Only two values:
+
+* `True`
+* `False`
+
+---
+
+### 19. What is a string in Python?
+
+A sequence of characters enclosed in quotes.
+
+```python
+name = "Rahul"
+```
+
+---
+
+### 20. Why are Python strings called immutable?
+
+Because their contents cannot be changed after creation.
+
+```python
+s = "Hello"
+# s[0] = "h"  # Error
+```
+
+---
+
+### 21. What is dynamic typing in Python?
+
+Python automatically determines the data type at runtime.
+
+```python
+x = 10
+x = "Hello"
+```
+
+No type declaration is required.
+
+---
+
+### 22. Can the same variable hold different types of values in Python?
+
+Yes.
+
+```python
+x = 10
+x = "Python"
+x = 3.14
+```
+
+---
+
+### 23. What will happen in the below code?
+
+```python
+a = 10
+a = "Hello"
+print(type(a))
+```
+
+**Output:**
+
+```python
+<class 'str'>
+```
+
+Because the value of `a` is reassigned to a string.
+
+---
+
+### 24. What is multiple assignment in Python?
+
+Assigning values to multiple variables in a single statement.
+
+```python
+a, b, c = 10, 20, 30
+```
+
+---
+
+### 25. How can we assign the same value to multiple variables?
+
+Using chained assignment.
+
+```python
+a = b = c = 5
+```
+
+---
+
+### 26. What is the output of:
+
+```python
+a = b = c = 5
+print(a, b, c)
+```
+
+**Output:**
+
+```python
+5 5 5
+```
+
+---
+
+### 27. What is the difference between decimal, binary, octal, and hexadecimal numbers?
+
+| Number System | Base | Digits   |
+| ------------- | ---- | -------- |
+| Decimal       | 10   | 0–9      |
+| Binary        | 2    | 0,1      |
+| Octal         | 8    | 0–7      |
+| Hexadecimal   | 16   | 0–9, A–F |
+
+---
+
+### 28. How do we write a binary number in Python?
+
+Using the prefix `0b`.
+
+```python
+x = 0b1010
+```
+
+---
+
+### 29. What is the prefix for octal numbers in Python?
+
+`0o`
+
+```python
+x = 0o12
+```
+
+---
+
+### 30. What is the prefix for hexadecimal numbers in Python?
+
+`0x`
+
+```python
+x = 0xA
+```
+
+---
+
+### 31. What is the decimal value of `0b1010`?
+
+Binary `1010` =
+
+[
+1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 0 \times 2^0
+]
+
+= 8 + 2 = **10**
+
+**Answer:** `10`
+
+---
+
+### 32. What is the decimal value of `0xA`?
+
+Hexadecimal `A` represents **10** in decimal.
+
+**Answer:** `10`

@@ -1,0 +1,307 @@
+### Q1. What is a list in Python? What is another name for it?
+
+A **list** is a container data type in Python used to store multiple values in a single variable.
+
+**Another name:** Sequence data type (because elements are stored in order).
+
+**Example:**
+
+```python
+numbers = [10, 20, 30, 40]
+```
+
+---
+
+### Q2. What are the 4 key characteristics of a list?
+
+1. **Ordered** – Elements maintain their insertion order.
+2. **Mutable** – Elements can be changed after creation.
+3. **Allows Duplicates** – Same value can appear multiple times.
+4. **Heterogeneous** – Different data types can be stored together.
+
+**Example:**
+
+```python
+data = [10, "Python", 3.14, True]
+```
+
+---
+
+### Q3. What is the difference between homogeneous and heterogeneous list? Give one example of each.
+
+| Homogeneous List               | Heterogeneous List                    |
+| ------------------------------ | ------------------------------------- |
+| Contains same type of elements | Contains different types of elements  |
+| Example: `[10, 20, 30, 40]`    | Example: `[10, "Python", 3.14, True]` |
+
+---
+
+### Q4. What is the difference between basic data types and container data types? Name all container data types in Python.
+
+| Basic Data Types                | Container Data Types                   |
+| ------------------------------- | -------------------------------------- |
+| Store a single value            | Store multiple values                  |
+| Examples: int, float, str, bool | Examples: list, tuple, set, dictionary |
+
+**Container Data Types:**
+
+* List (`[]`)
+* Tuple (`()`)
+* Set (`{}`)
+* Dictionary (`{key:value}`)
+
+---
+
+### Q5. What is list indexing? What is the difference between positive and negative indexing?
+
+**List indexing** is the process of accessing elements using their position.
+
+**Positive Indexing:** Starts from left to right.
+
+```python
+nums = [10, 20, 30, 40]
+print(nums[0])   # 10
+```
+
+**Negative Indexing:** Starts from right to left.
+
+```python
+print(nums[-1])  # 40
+```
+
+---
+
+### Q6. What index does the first element always have? What index does the last element always have in negative indexing?
+
+* First element index = **0**
+* Last element negative index = **-1**
+
+**Example:**
+
+```python
+nums = [10, 20, 30, 40]
+# 10 -> index 0
+# 40 -> index -1
+```
+
+---
+
+### Q7. What is list slicing? Write the full syntax with start, end, and step.
+
+**List slicing** is used to extract a portion of a list.
+
+**Syntax:**
+
+```python
+list_name[start:end:step]
+```
+
+**Example:**
+
+```python
+nums = [10, 20, 30, 40, 50]
+print(nums[1:4])
+```
+
+**Output:**
+
+```python
+[20, 30, 40]
+```
+
+---
+
+### Q8. In slicing, the end index is exclusive -- what does that mean? Give one example.
+
+**Exclusive** means the element at the end index is **not included** in the result.
+
+**Example:**
+
+```python
+nums = [10, 20, 30, 40, 50]
+print(nums[1:4])
+```
+
+**Output:**
+
+```python
+[20, 30, 40]
+```
+
+Here, index `4` (value `50`) is not included.
+
+---
+
+### Q9. What does list[:] return? What does it mean when both start and end are omitted?
+
+`list[:]` returns a **copy of the entire list**.
+
+**Example:**
+
+```python
+nums = [10, 20, 30]
+print(nums[:])
+```
+
+**Output:**
+
+```python
+[10, 20, 30]
+```
+
+When both start and end are omitted, Python selects all elements from beginning to end.
+
+---
+
+### Q10. What is the difference between mutable and immutable? Is list mutable or immutable?
+
+| Mutable                        | Immutable                         |
+| ------------------------------ | --------------------------------- |
+| Can be modified after creation | Cannot be modified after creation |
+| Example: List                  | Example: String, Tuple            |
+
+**List is mutable.**
+
+```python
+nums = [10, 20, 30]
+nums[1] = 50
+print(nums)
+```
+
+**Output:**
+
+```python
+[10, 50, 30]
+```
+
+---
+
+### Q11. Are duplicate values allowed in a list? Give one example.
+
+Yes, **duplicate values are allowed** in a list.
+
+**Example:**
+
+```python
+numbers = [10, 20, 10, 30, 20]
+print(numbers)
+```
+
+**Output:**
+
+```python
+[10, 20, 10, 30, 20]
+```
+
+---
+
+### Q12. How do you loop through a list using a for loop? Write the syntax.
+
+**Syntax:**
+
+```python
+for item in list_name:
+    statements
+```
+
+**Example:**
+
+```python
+nums = [10, 20, 30]
+
+for n in nums:
+    print(n)
+```
+
+---
+
+### Q13. What is the enumerate() function? When would you use it instead of a normal for loop?
+
+`enumerate()` returns both the **index** and the **value** while iterating.
+
+**Syntax:**
+
+```python
+for index, value in enumerate(list_name):
+    statements
+```
+
+**Example:**
+
+```python
+names = ["Ram", "Shyam", "Mohan"]
+
+for index, value in enumerate(names):
+    print(index, value)
+```
+
+**Output:**
+
+```python
+0 Ram
+1 Shyam
+2 Mohan
+```
+
+Use `enumerate()` when you need both the position and the element.
+
+---
+
+### Q14. What is the difference between for loop and while loop when iterating through a list?
+
+| For Loop                                | While Loop                                    |
+| --------------------------------------- | --------------------------------------------- |
+| Simpler and more readable               | Requires manual index handling                |
+| Used when number of iterations is known | Used when condition-based iteration is needed |
+
+**For Loop Example:**
+
+```python
+nums = [10, 20, 30]
+
+for n in nums:
+    print(n)
+```
+
+**While Loop Example:**
+
+```python
+nums = [10, 20, 30]
+i = 0
+
+while i < len(nums):
+    print(nums[i])
+    i += 1
+```
+
+---
+
+### Q15. What will len() return for an empty list? What will it return for a list with 5 elements?
+
+**Empty List:**
+
+```python
+nums = []
+print(len(nums))
+```
+
+**Output:**
+
+```python
+0
+```
+
+**List with 5 Elements:**
+
+```python
+nums = [10, 20, 30, 40, 50]
+print(len(nums))
+```
+
+**Output:**
+
+```python
+5
+```
+
+**Summary:** `len()` returns the total number of elements present in a list.
